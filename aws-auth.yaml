@@ -1,0 +1,19 @@
+apiVersion: v1
+data:
+  mapRoles: |
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::767397679511:role/eksctl-expense-nodegroup-demo-NodeInstanceRole-MrlsgruIrXaF
+      username: system:node:{{EC2PrivateDNSName}}
+  mapUsers: |
+    - groups:
+      - expense-trainer
+      userarn: arn:aws:iam::767397679511:user/K8-user
+      username: k8-user
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2024-11-26T05:53:46Z"
+  name: aws-auth
+  namespace: kube-system
+  uid: 710961d9-cc6e-4504-8a8d-246e143156f1
