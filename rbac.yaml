@@ -47,5 +47,5 @@ subjects:
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: Role
-  name: k8-admin
+  name: expense-admin
   apiGroup: rbac.authorization.k8s.io
